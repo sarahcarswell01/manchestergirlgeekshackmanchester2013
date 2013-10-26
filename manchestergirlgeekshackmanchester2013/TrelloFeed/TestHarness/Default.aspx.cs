@@ -33,10 +33,6 @@ namespace TestHarness
             var getTrelloCards = new GetTrelloCards();
             var results = getTrelloCards.GetNumberOfCardsInEachList();
 
-            //example on how to process results
-            foreach (var tuple in results)
-            {
-            }
 
             var listOfCards = getTrelloCards.GetListOfCards("To Do");
 

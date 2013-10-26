@@ -49,6 +49,7 @@
     <Compile Include="Classes\CommitResponse.cs" />
     <Compile Include="Classes\CommitDetail.cs" />
     <Compile Include="Classes\CommitResponseDetail.cs" />
+    <Compile Include="Classes\CommitResponseParent.cs" />
     <Compile Include="Classes\GitConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\SummaryDetail.cs" />

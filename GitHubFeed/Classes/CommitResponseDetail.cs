@@ -16,6 +16,9 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// <summary>
         /// Contains details of the author
         /// </summary>
+        /// <remarks>
+        /// Contains different detail to top level author record
+        /// </remarks>
         public CommitDetail Author
         {
             get;

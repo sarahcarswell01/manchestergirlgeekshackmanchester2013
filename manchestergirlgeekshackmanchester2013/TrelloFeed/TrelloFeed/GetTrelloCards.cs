@@ -15,6 +15,8 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
     {
         private List<Tuple<string, int>> stats = new List<Tuple<string, int>>();
         private ITrello trello =null;
+        //Dictionary<List<TrelloNet.Card>, string> listOfCardsByTeamMember = new Dictionary<List<TrelloNet.Card>, string>();
+        Dictionary<string, string> listOfCardsByTeamMember = new Dictionary<string, string>();
 
         /// <summary>
         /// Collates a list of all cards on a board in a list requested by name. 
@@ -33,6 +35,7 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
                 List requestedList = allListsInTheTrelloDevBoard.ToList().Find(m => m.Name == listName);
 
                 var groups = trello.Cards.ForBoard(teamBoard).GroupBy(m => m.IdList).Where(m => m.Key == requestedList.Id);
+                BuildCardToTeamMemberLookup();
 
                 foreach (var group in groups)
                 {
@@ -97,21 +100,45 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
             return allBoardsOfOrganisation.FirstOrDefault();
         }
 
-        private IEnumerable<Member> MatchCardsToTeamMembers()
+        private void BuildCardToTeamMemberLookup()
         {
             //get all members of a board
             IEnumerable<Member> membersOfTrelloDevBoard = trello.Members.ForBoard(GetTeamBoard());
-            Member teamMember = GetAuthorisedUser();
-            
-            //get all cards assigned to member
-            IEnumerable<TrelloNet.Card> allCardsAssignedToMe = trello.Cards.ForMember(teamMember);
-            return membersOfTrelloDevBoard;
+
+            foreach (var teamMember in membersOfTrelloDevBoard)
+            {
+                //get all cards assigned to member
+                IEnumerable<TrelloNet.Card> allCardsAssignedToMe = trello.Cards.ForMember(teamMember);
+
+                foreach (var card in allCardsAssignedToMe)
+                {
+                    string memberName = string.Empty;
+                    if (listOfCardsByTeamMember.TryGetValue(card.Id, out memberName))
+                    {
+                        //TODO: if card already exists - add to list of string names
+                    }
+                    else
+                    {
+                        listOfCardsByTeamMember.Add(card.Id, teamMember.FullName);
+                    }
+                }
+
+                //listOfCardsByTeamMember.Add(allCardsAssignedToMe.ToList(), teamMember.FullName);
+            }
         }
 
+        /// <summary>
+        /// Assigns data from TrelloNet Card object to our POCO card object
+        /// Looks up which team member is assigned to a particular card
+        /// </summary>
+        /// </summary>
+        /// <param name="trelloNetCard"></param>
+        /// <returns></returns>
         private Card TrelloCardToPOCOCardObject(TrelloNet.Card trelloNetCard)
         {
             Card card = new Card();
             card.Labels = new List<string>();
+            card.Members = new List<string>();
             card.Name = trelloNetCard.Name;
             card.Description = trelloNetCard.Desc;
 
@@ -120,10 +147,8 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
                 card.Labels.Add(label.Name);
             }
 
-            var members = MatchCardsToTeamMembers();
-
-
-
+            var member = listOfCardsByTeamMember[trelloNetCard.Id];
+            card.Members.Add(member);
             return card;
         }       
     }
