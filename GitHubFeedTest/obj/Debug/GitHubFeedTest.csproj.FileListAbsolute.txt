@@ -1,0 +1,13 @@
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\bin\Debug\GitHubFeedTest.exe
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\bin\Debug\GitHubFeedTest.pdb
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\bin\Debug\GitHubFeed.dll
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\bin\Debug\RestSharp.dll
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\bin\Debug\GitHubFeed.pdb
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\bin\Debug\RestSharp.xml
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\obj\Debug\GitHubFeedTest.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\obj\Debug\GitHubFeedTest.frmTest.resources
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\obj\Debug\GitHubFeedTest.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\obj\Debug\GitHubFeedTest.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\obj\Debug\GitHubFeedTest.exe
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\obj\Debug\GitHubFeedTest.pdb
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeedTest\bin\Debug\GitHubFeedTest.exe.config

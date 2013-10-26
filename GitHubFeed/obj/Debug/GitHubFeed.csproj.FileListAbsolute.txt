@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeed\bin\Debug\GitHubFeed.dll
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeed\bin\Debug\GitHubFeed.pdb
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeed\bin\Debug\RestSharp.dll
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeed\bin\Debug\RestSharp.xml
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeed\obj\Debug\GitHubFeed.dll
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeed\obj\Debug\GitHubFeed.pdb
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\GitHubFeed\obj\Debug\GitHubFeed.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\TrelloFeed.dll.config
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\TrelloFeed.dll
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\TrelloFeed.pdb
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\RestSharp.dll
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\TrelloNet.dll
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\RestSharp.xml
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\TrelloNet.xml
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\obj\Debug\TrelloFeed.csprojResolveAssemblyReference.cache
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\obj\Debug\TrelloFeed.csproj.GenerateResource.Cache
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\obj\Debug\TrelloFeed.dll
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\obj\Debug\TrelloFeed.pdb
+C:\Users\Sarah Carswell\Documents\GitHub\manchestergirlgeekshackmanchester2013\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\obj\Debug\TrelloFeed.Properties.Resource1.resources
