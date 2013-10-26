@@ -1,0 +1,111 @@
+﻿<Page x:Class="ManchesterGirlGeeks2013.MainWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+      Title="HackBoard" 
+      x:Name="_dash"
+      telerik:StyleManager.Theme="Windows8"
+      ShowsNavigationUI="False"
+      >
+    <Grid x:Name="_grid">
+        <telerik:RadTileList x:Name="_dashboard"
+                             ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                             ScrollViewer.VerticalScrollBarVisibility="Auto"
+                            Background="White">
+            <telerik:Tile x:Name="_twitter"
+                          TileType="Double" 
+                          IsSelected="False" 
+                          Background="LightGray">
+                <Grid >
+                    <StackPanel Orientation="Horizontal">
+                        <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Grid>
+                                <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Collapsed" />
+                                <Path Data="M-1777.84,-735.739C-1779.26,-736.059 -1779.02,-735.992 -1777.83,-736.24 -1774.63,-736.906 -1772.58,-737.916 -1772.35,-739.471 -1774.46,-738.8 -1776.62,-738.775 -1778.92,-739.183 -1779.98,-739.371 -1779.7,-739.271 -1779.93,-740.311 -1781.63,-747.819 -1787.53,-751.349 -1793.08,-751.454 -1786.29,-752.91 -1786.07,-755.831 -1792.48,-753.538 -1790.13,-754.984 -1789.89,-756.332 -1793.3,-754.722 -1793.91,-754.412 -1794.7,-753.83 -1795.24,-753.394 -1794.01,-755.809 -1795.09,-755.113 -1797.2,-752.919 -1800.02,-749.981 -1802.47,-745.925 -1804.47,-739.667 -1808.83,-744.16 -1816.2,-747.195 -1823.59,-750.022 -1825.24,-750.655 -1825.66,-751.22 -1825.25,-749.015 -1824.82,-746.675 -1823.12,-744.559 -1820.27,-742.834 -1821.23,-742.786 -1822.31,-742.674 -1823.15,-742.462 -1824,-742.244 -1823.96,-742.287 -1823.71,-741.447 -1822.94,-738.91 -1820.73,-737.018 -1817.1,-735.981 -1818.35,-735.883 -1819.57,-735.599 -1820.45,-734.955 -1821.26,-734.37 -1821.26,-734.311 -1820.76,-733.551 -1819.46,-731.546 -1817.23,-730.438 -1813.73,-730.403 -1817.43,-728.518 -1816.22,-725.026 -1811.56,-725.026 -1818.67,-717.951 -1828.26,-719.07 -1834.73,-724.146 -1824.87,-710.215 -1805.21,-709.103 -1791.71,-716.767 -1785.95,-720.032 -1781.41,-725.233 -1779.42,-732.494 -1776.24,-732.533 -1773.67,-733.483 -1772.06,-735.339 -1774.13,-735.243 -1776.09,-735.345 -1777.84,-735.739" Stretch="Uniform" Fill="#FFAAAAAA" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <TransformGroup.Children>
+                                                <RotateTransform Angle="0" />
+                                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                                            </TransformGroup.Children>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Grid>
+                        </Viewbox>
+                        <TextBlock Text="Twitter" 
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom"
+                                   FontSize="38"
+                                   Foreground="Gray"/>
+                    </StackPanel>
+                </Grid>
+            </telerik:Tile>
+            <telerik:Tile x:Name="_facebook"
+                          TileType="Double" 
+                          IsSelected="False"
+                          Background="LightGray"
+                      >
+                <Grid >
+                    <StackPanel Orientation="Horizontal">
+                        <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                            <Grid>
+                                <Grid Name="fbGrid" Width="48" Height="48" Visibility="Collapsed" />
+                                <Path Data="F1M-1775.32,-68.9708L-1831.47,-68.9708C-1833.27,-68.9708,-1834.73,-67.3745,-1834.73,-65.4058L-1834.73,-10.1649C-1834.73,-8.19482,-1833.27,-6.59973,-1831.47,-6.59973L-1802.47,-6.59973 -1802.47,-32.2261 -1809.5,-32.2261 -1809.5,-40.5503 -1802.47,-40.5503 -1802.47,-45.5282C-1802.47,-50.9435,-1798.08,-55.3315,-1792.66,-55.3315L-1783.74,-55.3315 -1783.74,-47.0099 -1787.86,-47.0099C-1789.89,-47.0099,-1791.53,-45.3667,-1791.53,-43.3407L-1791.53,-40.5503 -1783.74,-40.5503 -1783.74,-32.2261 -1791.53,-32.2261 -1791.53,-6.59973 -1775.32,-6.59973C-1773.52,-6.59973,-1772.06,-8.19482,-1772.06,-10.1649L-1772.06,-65.4058C-1772.06,-67.3745,-1773.52,-68.9708,-1775.32,-68.9708" Stretch="Uniform" Fill="#FFAAAAAA" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                                    <Path.RenderTransform>
+                                        <TransformGroup>
+                                            <TransformGroup.Children>
+                                                <RotateTransform Angle="0" />
+                                                <ScaleTransform ScaleX="1" ScaleY="1" />
+                                            </TransformGroup.Children>
+                                        </TransformGroup>
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Grid>
+                        </Viewbox>
+                        <TextBlock Text="Facebook"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Bottom"
+                                   FontSize="38"
+                                   Foreground="Gray"/>
+                    </StackPanel>
+                </Grid>
+            </telerik:Tile>
+
+            <telerik:Tile x:Name="_timer" 
+                          TileType="Single" 
+                          IsSelected="False" 
+                          Background="LightGray"
+                          MouseLeftButtonDown="_timer_MouseLeftButtonDown">
+                <Grid >
+                    <TextBlock Text="{Binding CountDown, ElementName=_dash, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                               FontSize="32"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Grid>
+            </telerik:Tile>
+            <telerik:Tile x:Name="_trelloView"
+                          TileType="Single" 
+                          IsSelected="False"
+                          Background="LightGray"
+                          MouseLeftButtonDown="_trello_MouseLeftButtonDown"
+                      >
+                <Image Source="Images/Trello_logo.png"/>
+            </telerik:Tile>
+
+            <telerik:Tile x:Name="_dilbert"
+                          TileType="Double" 
+                          IsSelected="False" 
+                          Background="LightGray">
+                <Image Source="Images/Dilbert.jpg" Stretch="Fill"/>
+            </telerik:Tile>
+            <telerik:Tile x:Name="_git"
+                          TileType="Double" 
+                          IsSelected="False"
+                          Background="LightGray" >
+                <Image Source="Images/github.png" Stretch="Fill"/>
+                       
+            </telerik:Tile>
+        </telerik:RadTileList>
+    </Grid>
+</Page>
