@@ -11,7 +11,18 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
     public class SummaryDetail
     {
         /// <summary>
-        /// Returns the number of commits in the hack date range
+        /// Returns the a list of last commits on a per user basis
+        /// </summary>
+        public List<CommitDetail> LastCommitDetails
+        {
+            get
+            {
+                EnsureCommitDetails();
+                return InternalLastCommitDetails;
+            }
+        }
+        /// <summary>
+        /// Contains details of the number of commits
         /// </summary>
         public int CommitCount
         {
@@ -40,7 +51,11 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// </summary>
         private bool HaveCommitDetails { get; set; }
         private bool HaveLineCount { get; set; }
-        private bool HaveLastCommit { get; set; }
+        
+        /// <summary>
+        /// Contains an internal list of all the last commits
+        /// </summary>
+        private List<CommitDetail> InternalLastCommitDetails { get; set; }
         /// <summary>
         /// Contains a count of commits
         /// </summary>
@@ -61,6 +76,9 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
             List<CommitResponse> validresponses;    // Responses in date range
             DateTime startdttm;             // Start date
             DateTime enddttm;               // End date
+            Dictionary<int, CommitDetail> UserCommits;      // Details all the last commits for all users
+            CommitDetail Author;            // Author for commit
+            bool IsLastCommit;              // True if working with the details of the last commit
 
             if (!this.HaveCommitDetails)
             {
@@ -73,22 +91,55 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
                 commitresponses = new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<IList<CommitResponse>>(responsedetails.Content);
                 //
                 validresponses = new List<CommitResponse>();
+                UserCommits = new Dictionary<int, CommitDetail>();
                 startdttm = new DateTime(2013, 10, 26, 14, 0, 0);
                 enddttm = new DateTime(2013, 10, 27, 14, 0, 0);
                 foreach (CommitResponse response in commitresponses)
                 {
-                    if (response.Commit.Author.Date >= startdttm && response.Commit.Author.Date <= enddttm)
+                    if (response.Commit.Author.Date >= startdttm && 
+                        response.Commit.Author.Date <= enddttm && 
+                        response.Parents.Count==1)
                     {
+                        IsLastCommit = false;
                         if (InternalLastCommit == null)
                         {
                             InternalLastCommit = response.Commit.Author;
+                            IsLastCommit = true;
                         }
                         else if (response.Commit.Author.Date > InternalLastCommit.Date)
                         {
                             InternalLastCommit = response.Commit.Author;
+                            IsLastCommit = true;
                         }
                         validresponses.Add(response);
+                        //
+                        // get author detail
+                        if (UserCommits.ContainsKey(response.Author.ID))
+                        {
+                            Author = UserCommits[response.Author.ID];
+                            if (Author.Date < response.Commit.Author.Date)
+                            {
+                                Author.Date = response.Commit.Author.Date;
+                            }
+                        }
+                        else
+                        {
+                            Author = MergeAuthorDetails(response.Commit.Author,response.Author);
+                            UserCommits.Add(response.Author.ID, Author);
+                        }
+                        //
+                        if (IsLastCommit && InternalLastCommit.ID!=response.Author.ID)
+                        {
+                            InternalLastCommit = MergeAuthorDetails(InternalLastCommit, response.Author);
+                        }
+                        //
                     }
+                }
+                //
+                this.InternalLastCommitDetails=new List<CommitDetail>();
+                foreach (int key in UserCommits.Keys)
+                {
+                    InternalLastCommitDetails.Add(UserCommits[key]);
                 }
                 InternalCommitCount = validresponses.Count();
                 //
@@ -103,6 +154,27 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
             this.HaveCommitDetails = false;
             this.InternalCommitCount = 0;
             this.InternalLastCommit = null;
+            this.InternalLastCommitDetails = null;
+        }
+        /// <summary>
+        /// Merges the author details from the top level author node and from the commit.author node
+        /// </summary>
+        /// <param name="CommitDetail">Contents from the commit.author node</param>
+        /// <param name="Author">Contents from the top level author node   </param>
+        /// <returns></returns>
+        private CommitDetail MergeAuthorDetails(CommitDetail CommitDetail,
+                                                CommitDetail Author)
+        {
+            CommitDetail ret;
+            //
+            ret = new CommitDetail();
+            // Data on commit.author
+            ret.Date=CommitDetail.Date;
+            ret.Name=CommitDetail.Name;
+            // data on author response value
+            ret.Avatar_URL = Author.Avatar_URL;
+            ret.ID = Author.ID;
+            return ret;
         }
     }
 }

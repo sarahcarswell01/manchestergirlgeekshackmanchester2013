@@ -24,6 +24,17 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// Models the comit data returned by the json
         /// </summary>
         public CommitResponseDetail Commit { get; set; }
+        /// <summary>
+        /// List of parent commits
+        /// </summary>
+        public IList<CommitResponseParent> Parents { get; set; }
+        /// <summary>
+        /// Author of committ
+        /// </summary>
+        /// <remarks>
+        /// Contains different data to commit.author
+        /// </remarks>
+        public CommitDetail Author { get; set; }
     }
     ///Notes !!
     //    "sha": "9c75f9828b36ce574e8248ccb8e1bbd3853f416e",
@@ -69,12 +80,6 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
     //  "type": "User",
     //  "site_admin": false
     //},
-    //"parents": [
-    //  {
-    //    "sha": "51c427aef6eeadca4a4f7c570119277583ab42ba",
-    //    "url": "https://api.github.com/repos/sarahcarswell01/manchestergirlgeekshackmanchester2013/commits/51c427aef6eeadca4a4f7c570119277583ab42ba",
-    //    "html_url": "https://github.com/sarahcarswell01/manchestergirlgeekshackmanchester2013/commit/51c427aef6eeadca4a4f7c570119277583ab42ba"
-    //  }
-    //]
+
     //}
 }

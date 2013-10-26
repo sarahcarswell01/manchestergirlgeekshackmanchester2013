@@ -18,5 +18,13 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// Contains the name of the person doing the commit.
         /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// Link to avatar url
+        /// </summary>
+        public string Avatar_URL { get; set; }
+        /// <summary>
+        /// Git hub id for user
+        /// </summary>
+        public int ID { get; set; }
     }
 }
