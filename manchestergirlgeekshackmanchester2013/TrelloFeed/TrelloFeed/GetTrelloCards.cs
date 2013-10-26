@@ -49,7 +49,6 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
             catch (Exception ex)
             {
             }
-
             return cards;
         }
         
@@ -70,7 +69,9 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
             foreach (var group in groups)
             {
                 var groupKey = group.Key;
-                stats.Add(Tuple.Create(groupKey, group.Count()));
+                var list = allListsInTheTrelloDevBoard.Where(m => m.GetListId() == groupKey);
+                var listName = list.FirstOrDefault().Name;
+                stats.Add(Tuple.Create(listName, group.Count()));
             }
 
             return stats;
@@ -86,28 +87,25 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
         private Member GetAuthorisedUser()
         {
             var member = trello.Members.WithId(Properties.Resource1.AuthorisedUser);
-            Member me = trello.Members.Me();
-            return me;
+            return trello.Members.Me();
         }
 
         private Board GetTeamBoard()
         {
             Organization organisation = trello.Organizations.WithId(Properties.Resource1.OrganisationName);
             IEnumerable<Board> allBoardsOfOrganisation = trello.Boards.ForOrganization(organisation);
-            Board teamBoard = allBoardsOfOrganisation.FirstOrDefault();
-            return teamBoard;
+            return allBoardsOfOrganisation.FirstOrDefault();
         }
 
-        private void MatchCardsToTeamMembers()
+        private IEnumerable<Member> MatchCardsToTeamMembers()
         {
             //get all members of a board
             IEnumerable<Member> membersOfTrelloDevBoard = trello.Members.ForBoard(GetTeamBoard());
-
             Member teamMember = GetAuthorisedUser();
             
             //get all cards assigned to member
-            //IEnumerable<Card> allCardsAssignedToMe = trello.Cards.ForMember(teamMember.Id, CardFilter.Open);
-
+            IEnumerable<TrelloNet.Card> allCardsAssignedToMe = trello.Cards.ForMember(teamMember);
+            return membersOfTrelloDevBoard;
         }
 
         private Card TrelloCardToPOCOCardObject(TrelloNet.Card trelloNetCard)
@@ -122,7 +120,9 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
                 card.Labels.Add(label.Name);
             }
 
-            MatchCardsToTeamMembers();
+            var members = MatchCardsToTeamMembers();
+
+
 
             return card;
         }       

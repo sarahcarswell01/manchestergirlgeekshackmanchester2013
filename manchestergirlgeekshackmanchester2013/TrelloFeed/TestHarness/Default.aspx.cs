@@ -29,9 +29,15 @@ namespace TestHarness
             //var response = request.GetResponse() as HttpWebResponse;
             //Response.Redirect(url.ToString(), true);
 
-            //now pass token to BL to pull data from trello.
+            //now pass oken to BL to pull data from trello.
             var getTrelloCards = new GetTrelloCards();
             var results = getTrelloCards.GetNumberOfCardsInEachList();
+
+            //example on how to process results
+            foreach (var tuple in results)
+            {
+            }
+
             var listOfCards = getTrelloCards.GetListOfCards("To Do");
 
         }
