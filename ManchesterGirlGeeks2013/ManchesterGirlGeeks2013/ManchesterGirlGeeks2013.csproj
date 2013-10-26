@@ -48,6 +48,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for WPF Q3 2013\Binaries\WPF40\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
+    <Reference Include="TrelloFeed">
+      <HintPath>..\..\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\TrelloFeed.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

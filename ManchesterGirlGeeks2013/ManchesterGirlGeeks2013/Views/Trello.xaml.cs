@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using manchestergirlgeekshackmanchester2013.TrelloFeed;
 
 namespace ManchesterGirlGeeks2013.Views
 {
@@ -19,9 +20,63 @@ namespace ManchesterGirlGeeks2013.Views
     /// </summary>
     public partial class Trello : Page
     {
+        
+        GetTrelloCards getTrelloCards = new GetTrelloCards();
+        
+        #region Properties
+        /// <summary>
+        /// Property in which we store the number of items to do
+        /// </summary>
+        public int ToDoItems
+        {
+            get
+            {
+                return getTrelloCards.GetNumberOfCardsInEachList().ElementAt(0).Item2;
+            }
+        }
+        /// <summary>
+        /// Property in which we store the number of items in progress
+        /// </summary>
+        public int DoingItems
+        {
+            get
+            {
+                return getTrelloCards.GetNumberOfCardsInEachList().ElementAt(1).Item2;
+            }
+        }
+        /// <summary>
+        /// Property in which we store the number of items done
+        /// </summary>
+        public int DoneItems
+        {
+            get
+            {
+                return getTrelloCards.GetNumberOfCardsInEachList().ElementAt(2).Item2;
+            }
+        }
+        public List<Card> Cards
+        {
+            get
+            {
+                return getTrelloCards.GetListOfCards("To Do");
+            }
+
+        }
+        #endregion
+
+        #region Constructors
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public Trello()
         {
             InitializeComponent();
+
+            
+
+            var listOfCards = getTrelloCards.GetListOfCards("To Do");
+
         }
+        #endregion
     }
 }
