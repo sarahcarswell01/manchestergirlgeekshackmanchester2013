@@ -1,0 +1,12 @@
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\obj\Debug\TwitterFeedTest.frmTest.resources
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\obj\Debug\TwitterFeedTest.Properties.Resources.resources
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\obj\Debug\TwitterFeedTest.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\obj\Debug\TwitterFeedTest.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\bin\Debug\TwitterFeedTest.exe
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\bin\Debug\TwitterFeedTest.pdb
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\bin\Debug\RestSharp.dll
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\bin\Debug\TwitterFeed.dll
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\bin\Debug\TwitterFeed.pdb
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\bin\Debug\RestSharp.xml
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\obj\Debug\TwitterFeedTest.exe
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeedTest\obj\Debug\TwitterFeedTest.pdb

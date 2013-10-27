@@ -13,6 +13,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ManchesterGirlGeeks2013.Views;
 using System.ComponentModel;
+using manchestergirlgeekshackmanchester2013.HackImages;
+using System.Collections.Specialized;
 
 namespace ManchesterGirlGeeks2013
 {
@@ -27,6 +29,7 @@ namespace ManchesterGirlGeeks2013
         public GitHub _gitHub = new GitHub();
         public Delbert _dilbert = new Delbert();
         public Twitter _twitter = new Twitter();
+        HackDayImageProvider _images = new HackDayImageProvider();
         #endregion
 
         #region Properties
@@ -34,6 +37,17 @@ namespace ManchesterGirlGeeks2013
         {
             get {return _timerView.CountDown  ;}
             set { ;}
+        }
+
+        public List<string> Images
+        {
+            get 
+            {
+                string[] strArray = new string[_images.Images.Count];
+
+                 (_images.Images).CopyTo(strArray, 0);
+                 return strArray.ToList() ;
+            }
         }
         #endregion
 
@@ -44,12 +58,7 @@ namespace ManchesterGirlGeeks2013
         public MainWindow()
         {
             InitializeComponent();
-
-            this.WindowWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-            this.WindowHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
-            
-
-         }
+        }
         #endregion
 
         #region Events
@@ -99,5 +108,5 @@ namespace ManchesterGirlGeeks2013
         }
         #endregion
              
-    }
+    }    
 }

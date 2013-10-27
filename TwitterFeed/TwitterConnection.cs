@@ -78,6 +78,56 @@ namespace manchestergirlgeekshackmanchester2013.TwitterFeed
             return tweets.statuses;
         }
         /// <summary>
+        /// Returns a list of favourite feets
+        /// </summary>
+        /// <returns></returns>
+        public List<TwitterStatusResponse> Favourites()
+        {
+            List<TwitterStatusResponse> tweets;         // Current tweets
+            List<TwitterStatusResponse> favourites;     // Current favourites
+            List<TwitterStatusResponse> topstatus;      // top status to return
+            StringCollection texts;                     // cache of texts used
+            List<int> numbersused;                      // cache of idnexes used
+            Random randomnumbers;                       // random number generator
+            int index;                                  // index in tweet to read
+
+            favourites = new List<TwitterStatusResponse>();
+            topstatus = new List<TwitterStatusResponse>();
+            tweets = this.Tweets();
+            texts = new StringCollection();
+            foreach (TwitterStatusResponse response in tweets)
+            {
+                if (response.retweet_count>0)
+                {
+                    favourites.Add(response);
+                }
+            }
+            if (favourites.Count <= 5)
+            {
+                return favourites;
+            }
+            else
+            {
+                randomnumbers = new Random();
+                numbersused=new List<int>();
+                while (topstatus.Count < 5 && numbersused.Count!=favourites.Count)
+                {
+                    index = randomnumbers.Next(0, favourites.Count);
+                    if (!numbersused.Contains(index))
+                    {
+                        if (!texts.Contains(favourites[index].text))
+                        {
+                            topstatus.Add(favourites[index]);
+                            texts.Add(favourites[index].text);
+                        }
+                        numbersused.Add(index);
+                    }
+                }
+                //
+                return topstatus;
+            }
+        }
+        /// <summary>
         /// Returns a prepared rest request object
         /// </summary>
         /// <param name="url">url to open connection for</param>

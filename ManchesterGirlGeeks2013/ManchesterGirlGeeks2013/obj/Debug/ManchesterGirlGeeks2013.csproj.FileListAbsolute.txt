@@ -44,3 +44,5 @@ C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\Mancheste
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\Views\Twitter.g.cs
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\TwitterFeed.dll
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\TwitterFeed.pdb
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\HackImages.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\HackImages.pdb
