@@ -28,7 +28,14 @@ namespace ManchesterGirlGeeks2013.Views
         {
             get 
             {
-                return 0;
+                return detail.CommitCount;
+            }
+        }
+        public CommitDetail LastCommitdetail
+        {
+            get
+            {
+                return detail.LastCommit;
             }
         }
         #endregion

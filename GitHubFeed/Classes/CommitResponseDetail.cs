@@ -39,6 +39,7 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// sha is the unique id
         /// </remarks>
         public string sha { get; set; }
+      //public CommitResponseBranch Tree { get; set; }
         ///notes!
         //"commit": {
         //  "author": {

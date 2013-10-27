@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CommitedFileTypes.cs" />
     <Compile Include="Classes\CommitResponse.cs" />
     <Compile Include="Classes\CommitDetail.cs" />
     <Compile Include="Classes\CommitResponseDetail.cs" />

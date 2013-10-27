@@ -45,6 +45,7 @@
                 <RowDefinition Height="33"/>
                 <RowDefinition Height="33"/>
                 <RowDefinition Height="33"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             
             <TextBlock Text="Last Commit"
@@ -58,7 +59,7 @@
                        Foreground="LightGray"
                        Grid.Row="1"
                        Width="300"/>
-            <TextBlock Text="put date"
+            <TextBlock Text="{Binding LastCommitdetail.Date, ElementName=_gitPage, UpdateSourceTrigger=PropertyChanged}"
                        FontSize="24"
                        Foreground="Black"
                        Background="LightGray"
@@ -71,7 +72,7 @@
                        TextAlignment="Center"
                        Grid.Row="3"
                        Width="300"/>
-            <TextBlock Text="put id"
+            <TextBlock Text="{Binding LastCommitdetail.ID, ElementName=_gitPage, UpdateSourceTrigger=PropertyChanged}"
                        FontSize="24"
                        Foreground="Black"
                        Background="LightGray"
@@ -84,13 +85,15 @@
                        TextAlignment="Center"
                        Grid.Row="5"
                        Width="300"/>
-            <TextBlock Text="put name"
+            <TextBlock Text="{Binding LastCommitdetail.Name, ElementName=_gitPage, UpdateSourceTrigger=PropertyChanged}"
                        FontSize="24"
                        Foreground="Black"
                        Background="LightGray"
                        TextAlignment="Center"
                        Grid.Row="6"
                        Width="300"/>
+            <Image Source="{Binding LastCommitdetail.Avatar, ElementName=_gitPage, UpdateSourceTrigger=PropertyChanged}"
+                   Grid.Row="7"/>
         </Grid>
 
         <Image Source="/ManchesterGirlGeeks2013;component/Images/Previous.png"

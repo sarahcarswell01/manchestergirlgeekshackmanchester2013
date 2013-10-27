@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace manchestergirlgeekshackmanchester2013.DilbertFeed
 {
-    public class Class1
+    public class Dilbert
     {
         string dilbertUri = "http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/100000/10000/0000/200/{0}/{1}.strip.zoom.gif";
 
-        public Class1()
+        public Dilbert()
         {
         }
 

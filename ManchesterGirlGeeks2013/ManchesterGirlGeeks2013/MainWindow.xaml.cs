@@ -25,6 +25,8 @@ namespace ManchesterGirlGeeks2013
         private Timer _timerView = new Timer();
         public Trello _trello = new Trello();
         public GitHub _gitHub = new GitHub();
+        public Delbert _dilbert = new Delbert();
+        public Twitter _twitter = new Twitter();
         #endregion
 
         #region Properties
@@ -87,10 +89,15 @@ namespace ManchesterGirlGeeks2013
             _dash.NavigationService.Navigate(_gitHub);
 
         }
+        private void _dilbert_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(_dilbert);
+        }
+        private void _twitter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(_twitter);
+        }
         #endregion
-
-       
-
-       
+             
     }
 }

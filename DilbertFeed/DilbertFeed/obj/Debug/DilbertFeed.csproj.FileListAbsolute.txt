@@ -2,3 +2,7 @@ c:\users\home\documents\visual studio 2012\Projects\DilbertFeed\DilbertFeed\bin\
 c:\users\home\documents\visual studio 2012\Projects\DilbertFeed\DilbertFeed\bin\Debug\DilbertFeed.pdb
 c:\users\home\documents\visual studio 2012\Projects\DilbertFeed\DilbertFeed\obj\Debug\DilbertFeed.dll
 c:\users\home\documents\visual studio 2012\Projects\DilbertFeed\DilbertFeed\obj\Debug\DilbertFeed.pdb
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\DilbertFeed\DilbertFeed\bin\Debug\DilbertFeed.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\DilbertFeed\DilbertFeed\bin\Debug\DilbertFeed.pdb
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\DilbertFeed\DilbertFeed\obj\Debug\DilbertFeed.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\DilbertFeed\DilbertFeed\obj\Debug\DilbertFeed.pdb

@@ -22,8 +22,8 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// </summary>
         public GitConnection()
         {
-            this.Username = ConfigurationManager.AppSettings["username"];
-            this.Password = ConfigurationManager.AppSettings["password"];
+            this.Username = "RabebOthmani";
+            this.Password = "Othmanibebar1987";
         }
         ///
         ///<summary> 

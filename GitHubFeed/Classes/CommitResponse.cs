@@ -35,6 +35,10 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// Contains different data to commit.author
         /// </remarks>
         public CommitDetail Author { get; set; }
+        public CommitResponse()
+        {
+
+        }
     }
     ///Notes !!
     //    "sha": "9c75f9828b36ce574e8248ccb8e1bbd3853f416e",

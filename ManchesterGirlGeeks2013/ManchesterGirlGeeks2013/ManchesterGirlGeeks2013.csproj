@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DilbertFeed">
+      <HintPath>..\..\DilbertFeed\DilbertFeed\bin\Debug\DilbertFeed.dll</HintPath>
+    </Reference>
     <Reference Include="GitHubFeed">
       <HintPath>..\..\GitHubFeed\bin\Debug\GitHubFeed.dll</HintPath>
     </Reference>
@@ -54,6 +57,9 @@
     <Reference Include="TrelloFeed">
       <HintPath>..\..\manchestergirlgeekshackmanchester2013\TrelloFeed\TrelloFeed\bin\Debug\TrelloFeed.dll</HintPath>
     </Reference>
+    <Reference Include="TwitterFeed">
+      <HintPath>..\..\TwitterFeed\bin\Debug\TwitterFeed.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -64,6 +70,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="HelperClasses\TimerTextBlock.cs" />
+    <Compile Include="Views\Dilbert.xaml.cs">
+      <DependentUpon>Dilbert.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\GitHub.xaml.cs">
       <DependentUpon>GitHub.xaml</DependentUpon>
     </Compile>
@@ -72,6 +81,9 @@
     </Compile>
     <Compile Include="Views\Trello.xaml.cs">
       <DependentUpon>Trello.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Twitter.xaml.cs">
+      <DependentUpon>Twitter.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +97,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Dilbert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\GitHub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,6 +110,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Trello.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Twitter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RestSharp;
+using System.Collections.Specialized;
 namespace manchestergirlgeekshackmanchester2013.GitHubFeed
 {
     /// <summary>
@@ -32,8 +33,13 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
                 return InternalCommitCount;
             }
         }
-        //public int LineCount { get;
-        // tbd
+        //public int FileCount
+        //{
+        //    get
+        //    {
+        //        EnsureFileDetails();
+        //        return InternalFileCount;
+        //    }
         //}
         /// <summary>
         /// Details the last commit
@@ -51,7 +57,8 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// </summary>
         private bool HaveCommitDetails { get; set; }
         private bool HaveLineCount { get; set; }
-        
+        private int InternalFileCount { get; set; }
+        private int CurrentCommitCount { get; set; }
         /// <summary>
         /// Contains an internal list of all the last commits
         /// </summary>
@@ -64,6 +71,7 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
         /// Contains details of the last commit
         /// </summary>
         private CommitDetail InternalLastCommit { get; set; }
+        private IList<CommitResponse> CommitResponses { get; set; }
         /// <summary>
         /// Reads the commit data
         /// </summary>
@@ -72,14 +80,14 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
             GitConnection connection;       // Connection to git hub
             RestRequest requestdetails;     // Request to send
             IRestResponse responsedetails;  // Response from request
-            IList<CommitResponse> commitresponses;  // Details of response
+           
             List<CommitResponse> validresponses;    // Responses in date range
             DateTime startdttm;             // Start date
             DateTime enddttm;               // End date
             Dictionary<int, CommitDetail> UserCommits;      // Details all the last commits for all users
             CommitDetail Author;            // Author for commit
             bool IsLastCommit;              // True if working with the details of the last commit
-
+           
             if (!this.HaveCommitDetails)
             {
                 connection = new GitConnection();
@@ -87,14 +95,13 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
                 requestdetails.Method = Method.GET;
 
                 responsedetails = connection.ExecuteRequest(requestdetails);
-
-                commitresponses = new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<IList<CommitResponse>>(responsedetails.Content);
+                CommitResponses = new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<IList<CommitResponse>>(responsedetails.Content);
                 //
                 validresponses = new List<CommitResponse>();
                 UserCommits = new Dictionary<int, CommitDetail>();
                 startdttm = new DateTime(2013, 10, 26, 14, 0, 0);
                 enddttm = new DateTime(2013, 10, 27, 14, 0, 0);
-                foreach (CommitResponse response in commitresponses)
+                foreach (CommitResponse response in CommitResponses)
                 {
                     if (response.Commit.Author.Date >= startdttm && 
                         response.Commit.Author.Date <= enddttm && 
@@ -176,5 +183,63 @@ namespace manchestergirlgeekshackmanchester2013.GitHubFeed
             ret.ID = Author.ID;
             return ret;
         }
+        //private void EnsureFileDetails()
+        //{
+        //    StringCollection files;
+        //    GitConnection connection;       // Connection to git hub
+        //    //
+        //    EnsureCommitDetails();
+        //    if (this.InternalCommitCount != this.CurrentCommitCount)
+        //    {
+        //        connection = new GitConnection();
+        //        files = new StringCollection();
+        //        foreach (CommitResponse response in this.CommitResponses)
+        //        {
+        //                GetFiles(connection, response.Commit.Tree.url,"", ref files);
+                   
+        //        }
+        //        this.InternalFileCount = files.Count;
+        //        this.CurrentCommitCount = this.InternalCommitCount;
+        //    }
+        //}
+        //private void GetFiles(GitConnection connection,
+        //                       string URL,
+        //                       string path,
+        //                         ref StringCollection files)
+        //{
+        //    string file;
+        //    RestRequest requestdetails;     // Request to send
+        //    IRestResponse responsedetails;  // Response from request
+        //    CommitResponseTree tree;
+        //    string thispath;
+        //    //
+        //    requestdetails = new RestRequest(URL.Replace("https://api.github.com/", ""));
+        //    requestdetails.Method = Method.GET;
+
+        //    responsedetails = connection.ExecuteRequest(requestdetails);
+
+        //    tree = new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<CommitResponseTree>(responsedetails.Content);
+        //    //
+        //    foreach (CommitResponseBranch branch in tree)
+        //    {
+        //        if (string.IsNullOrEmpty(branch.type) || branch.type == "tree")
+        //        {
+        //            thispath = "";
+        //            if (!string.IsNullOrEmpty(branch.path))
+        //            {
+        //                thispath = path + "/" + branch.path;
+        //            }
+        //            GetFiles(connection, branch.url, thispath,ref files);
+        //        }
+        //        else
+        //        {
+        //            file = path + "/" + branch.path;
+        //            if (!files.Contains(file))
+        //            {
+        //                files.Add(file);
+        //            }
+        //        }
+        //    }
+        //}
     }
 }
