@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.ComponentModel;
 using manchestergirlgeekshackmanchester2013.TrelloFeed;
 
 namespace ManchesterGirlGeeks2013.Views
@@ -25,6 +26,15 @@ namespace ManchesterGirlGeeks2013.Views
         GetTrelloCards getTrelloCards = new GetTrelloCards();
         
         #region Properties
+        public event PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string name)
+        {
+            var handler = this.PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(name));
+        }
+      
         /// <summary>
         /// Property in which we store the number of items to do
         /// </summary>
@@ -44,6 +54,10 @@ namespace ManchesterGirlGeeks2013.Views
             {
                 return getTrelloCards.GetNumberOfCardsInEachList().ElementAt(1).Item2;
             }
+            set
+            {
+                
+            }
         }
         /// <summary>
         /// Property in which we store the number of items done
@@ -54,6 +68,11 @@ namespace ManchesterGirlGeeks2013.Views
             {
                 return getTrelloCards.GetNumberOfCardsInEachList().ElementAt(2).Item2;
             }
+            //set
+            //{
+            //    //this.DoneItems = value;
+            //    this.RaisePropertyChanged("DoneItems");
+            //}
         }
         public List<Card> Cards
         {
@@ -74,7 +93,7 @@ namespace ManchesterGirlGeeks2013.Views
         {
             InitializeComponent();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 01, 0);
+            dispatcherTimer.Interval = new TimeSpan(0,0, 0, 10);
             dispatcherTimer.Start();
         }
         #endregion
@@ -88,6 +107,8 @@ namespace ManchesterGirlGeeks2013.Views
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
             Cards = getTrelloCards.GetListOfCards("Doing");
+           // this.DoneItems = 20;
+            //stckDone.ref
         }
 
         #endregion

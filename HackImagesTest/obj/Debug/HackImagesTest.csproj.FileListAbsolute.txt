@@ -8,3 +8,13 @@ C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImages
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.csproj.GenerateResource.Cache
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.exe
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.pdb
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.exe
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.pdb
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\bin\Debug\HackImagesTest.exe
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\bin\Debug\HackImagesTest.pdb
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\bin\Debug\HackImages.dll
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\bin\Debug\HackImages.pdb
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.csprojResolveAssemblyReference.cache
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.Form1.resources
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.Properties.Resources.resources
+C:\Users\Home\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImagesTest\obj\Debug\HackImagesTest.csproj.GenerateResource.Cache

@@ -79,7 +79,8 @@
                        Width="100"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"                       
-                       FontSize="36" TextAlignment="Center"/>
+                       FontSize="36" TextAlignment="Center"
+                       Name="txtToDoItems"/>
             
         </StackPanel>
         <StackPanel Orientation="Vertical"
@@ -92,20 +93,23 @@
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="36"
-                       Foreground="Orange"/>
+                       Foreground="Orange"
+                       />
             <TextBlock Text="{Binding DoingItems , ElementName=_trelloPage, UpdateSourceTrigger=PropertyChanged}"
                        Width="100"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontSize="36"
-                       TextAlignment="Center"/>
+                       TextAlignment="Center"
+                       Name="txtDoingItems"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical"
                     Grid.Column="2"
                     Background="LightGray"
                     Width="200"
-                    Height="150">
+                    Height="150"
+                    Name="stckDone">
             <TextBlock Text="Done"
                        Width="100"
                        HorizontalAlignment="Center"
@@ -117,7 +121,8 @@
                        FontSize="36"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       TextAlignment="Center"/>
+                       TextAlignment="Center"
+                       Name="txtDoneItems"/>
 
         </StackPanel>
         <Grid Grid.Row="1"

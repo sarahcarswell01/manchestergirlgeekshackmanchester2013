@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripAdvisorWidget", "WebApplication2\TripAdvisorWidget.csproj", "{38D12C89-6F39-423C-8FE6-36F5D038FAAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{3F7B20AA-70DD-4E51-8E3E-D610B7D22D0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38D12C89-6F39-423C-8FE6-36F5D038FAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38D12C89-6F39-423C-8FE6-36F5D038FAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38D12C89-6F39-423C-8FE6-36F5D038FAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38D12C89-6F39-423C-8FE6-36F5D038FAAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F7B20AA-70DD-4E51-8E3E-D610B7D22D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F7B20AA-70DD-4E51-8E3E-D610B7D22D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F7B20AA-70DD-4E51-8E3E-D610B7D22D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F7B20AA-70DD-4E51-8E3E-D610B7D22D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

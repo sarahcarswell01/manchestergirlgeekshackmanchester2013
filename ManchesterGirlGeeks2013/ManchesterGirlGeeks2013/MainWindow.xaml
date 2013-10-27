@@ -71,11 +71,11 @@
                           MouseLeftButtonDown="_trello_MouseLeftButtonDown"    > 
                 <Image Source="Images/Trello_logo.png"/>
             </telerik:Tile>
-            <telerik:Tile x:Name="_hacView"
+            <telerik:Tile x:Name="_hac"
                           TileType="Double" 
                           IsSelected="False" 
                           Background="LightGray"
-                          MouseLeftButtonDown="_dilbert_MouseLeftButtonDown">
+                          MouseLeftButtonDown="_hac_MouseLeftButtonDown">
                 <Image Source="Images/Hac.jpg" Stretch="Fill"/>
             </telerik:Tile>
             <telerik:Tile x:Name="_git"

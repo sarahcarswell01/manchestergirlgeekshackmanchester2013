@@ -1,0 +1,5 @@
+c:\users\home\documents\visual studio 2012\Projects\WhatsNearWidget\WebApplication2\bin\TripAdvisorWidget.dll
+c:\users\home\documents\visual studio 2012\Projects\WhatsNearWidget\WebApplication2\bin\TripAdvisorWidget.pdb
+c:\users\home\documents\visual studio 2012\Projects\WhatsNearWidget\WebApplication2\obj\Debug\TripAdvisorWidget.dll
+c:\users\home\documents\visual studio 2012\Projects\WhatsNearWidget\WebApplication2\obj\Debug\TripAdvisorWidget.pdb
+C:\Users\Home\Documents\Visual Studio 2012\Projects\WhatsNearWidget\WebApplication2\obj\Debug\TripAdvisorWidget.csprojResolveAssemblyReference.cache
