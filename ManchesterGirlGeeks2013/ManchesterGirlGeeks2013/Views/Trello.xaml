@@ -6,18 +6,19 @@
       xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-	  Title="Trello">
+	  Title="Trello"
+      x:Name="_trelloPage">
     <Page.Resources>
         <DataTemplate x:Key="_listItem">
             <StackPanel Orientation="Horizontal"
-                        Width="150">
-                <TextBlock Text="binding"/>
-                <TextBlock Text="binding"/>
+                        >
+                <TextBlock Text="{Binding Description}"/>
+                <TextBlock Text="{Binding Name}"/>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
 
-    <Grid Margin="0,50,0,0">
+    <Grid Margin="0,50,0,0"  >
         <Grid.RowDefinitions>
             <RowDefinition Height="25*"/>
             <RowDefinition Height="75*"/>
@@ -33,10 +34,17 @@
                     Background="LightGray"
                     Width="200"
                     Height="150">
-            <TextBlock Text="ToDo"
-                       Width="100"/>
-            <TextBlock Text="To be bind to number of items"
-                       Width="100"/>
+            <TextBlock Text="To Do"
+                       Width="100"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="Red"
+                       FontSize="36"/>
+            <TextBlock Text="{Binding ToDoItems , ElementName=_trelloPage, UpdateSourceTrigger=PropertyChanged}"
+                       Width="100"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"                       
+                       FontSize="36" TextAlignment="Center"/>
             
         </StackPanel>
         <StackPanel Orientation="Vertical"
@@ -45,9 +53,17 @@
                     Width="200"
                     Height="150">
             <TextBlock Text="Doing"
-                       Width="100"/>
-            <TextBlock Text="To be bind to number of items"
-                       Width="100"/>
+                       Width="100"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="36"
+                       Foreground="Orange"/>
+            <TextBlock Text="{Binding DoingItems , ElementName=_trelloPage, UpdateSourceTrigger=PropertyChanged}"
+                       Width="100"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontSize="36"
+                       TextAlignment="Center"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical"
@@ -56,9 +72,17 @@
                     Width="200"
                     Height="150">
             <TextBlock Text="Done"
-                       Width="100"/>
-            <TextBlock Text="To be bind to number of items"
-                       Width="100"/>
+                       Width="100"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="36"
+                       Foreground="Green"/>
+            <TextBlock Text="{Binding DoneItems , ElementName=_trelloPage, UpdateSourceTrigger=PropertyChanged}"
+                       Width="100"
+                       FontSize="36"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"/>
 
         </StackPanel>
         <Grid Grid.Row="1"
@@ -71,7 +95,10 @@
                        FontSize="48"
                        Foreground="LightGray"/>
             <telerik:RadListBox Grid.Row="1"
-                                ItemTemplate="{StaticResource _listItem}"/>
+                                ItemTemplate="{StaticResource _listItem}"
+                                Width="400"
+                                ItemsSource="{Binding Cards, ElementName=_trelloPage, UpdateSourceTrigger=PropertyChanged}"
+                                telerik:StyleManager.Theme="Windows8"/>
         </Grid>
     </Grid>
 </Page>

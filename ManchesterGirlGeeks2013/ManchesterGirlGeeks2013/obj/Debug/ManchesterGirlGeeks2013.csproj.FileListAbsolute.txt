@@ -24,3 +24,12 @@ C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\Mancheste
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\Views\Timer.baml
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\Views\Trello.baml
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\Views\Trello.g.cs
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\TrelloFeed.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\TrelloNet.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\RestSharp.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\TrelloFeed.pdb
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\TrelloNet.xml
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\RestSharp.xml
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\ManchesterGirlGeeks2013.csprojResolveAssemblyReference.cache
