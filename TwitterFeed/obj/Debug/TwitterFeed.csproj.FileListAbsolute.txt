@@ -4,4 +4,3 @@ C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFee
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeed\bin\Debug\RestSharp.xml
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeed\obj\Debug\TwitterFeed.dll
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeed\obj\Debug\TwitterFeed.pdb
-C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\TwitterFeed\obj\Debug\TwitterFeed.csprojResolveAssemblyReference.cache

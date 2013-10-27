@@ -70,6 +70,7 @@ namespace manchestergirlgeekshackmanchester2013.TwitterFeed
         /// Details the user 
         /// </summary>
         public TwitterUser user { get; set; }
+        public int retweet_count { get; set; }
         //[{"metadata":{"result_type":"recent","iso_language_code":"en"},
           //"created_at":"Sun Oct 27 04:17:28 +0000 2013","id":394316895949570048,"id_str":"394316895949570048",
           //"text":"RT @_welf: 14 hours into coding is a good time to be looking up how an if statement works in python, right? @HackManchester #HackManchester"
