@@ -15,8 +15,7 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
     {
         private List<Tuple<string, int>> stats = new List<Tuple<string, int>>();
         private ITrello trello =null;
-        //Dictionary<List<TrelloNet.Card>, string> listOfCardsByTeamMember = new Dictionary<List<TrelloNet.Card>, string>();
-        Dictionary<string, string> listOfCardsByTeamMember = new Dictionary<string, string>();
+        Dictionary<string, List<string>> listOfCardsByTeamMember = new Dictionary<string, List<string>>();
 
         /// <summary>
         /// Collates a list of all cards on a board in a list requested by name. 
@@ -56,7 +55,7 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
         }
         
         /// <summary>
-        /// 
+        /// Reads the authorisation key from the resources file to access the TrelloNet API.
         /// </summary>
         /// <returns></returns>
         public List<Tuple<string, int>> GetNumberOfCardsInEachList()
@@ -100,6 +99,9 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
             return allBoardsOfOrganisation.FirstOrDefault();
         }
 
+        /// <summary>
+        /// Create a dictionary lookup for cards and team members. Each card is held as a key with a list of all members who are assigned to the card.
+        /// </summary>
         private void BuildCardToTeamMemberLookup()
         {
             //get all members of a board
@@ -112,18 +114,21 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
 
                 foreach (var card in allCardsAssignedToMe)
                 {
-                    string memberName = string.Empty;
-                    if (listOfCardsByTeamMember.TryGetValue(card.Id, out memberName))
+                    List<string> existingMember = new List<string>();
+                    List<string> members = new List<string>();
+
+                    if (listOfCardsByTeamMember.TryGetValue(card.Id, out existingMember))
                     {
-                        //TODO: if card already exists - add to list of string names
+                        //if card already exists - add to list of string names
+                        existingMember.Add(teamMember.FullName);
+                        listOfCardsByTeamMember[card.Id] = existingMember;
                     }
                     else
-                    {
-                        listOfCardsByTeamMember.Add(card.Id, teamMember.FullName);
+                    {                        
+                        members.Add(teamMember.FullName); 
+                        listOfCardsByTeamMember.Add(card.Id, members);
                     }
                 }
-
-                //listOfCardsByTeamMember.Add(allCardsAssignedToMe.ToList(), teamMember.FullName);
             }
         }
 
@@ -147,8 +152,13 @@ namespace manchestergirlgeekshackmanchester2013.TrelloFeed
                 card.Labels.Add(label.Name);
             }
 
-            var member = listOfCardsByTeamMember[trelloNetCard.Id];
-            card.Members.Add(member);
+            var teamMembers = listOfCardsByTeamMember[trelloNetCard.Id];
+
+            foreach (var member in teamMembers)
+            {
+                card.Members.Add(member);
+            }
+
             return card;
         }       
     }

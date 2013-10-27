@@ -19,22 +19,11 @@ namespace TestHarness
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
-            //redirect user to a url to get a token
-            //string trelloApplicationKey = Properties.Resource1.TrelloApplicationKey;
-            //ITrello trello = new Trello(trelloApplicationKey);
-            //var url = trello.GetAuthorizationUrl("TrelloFeed", Scope.ReadWrite);
-            
-            //Uri targetUri = url;
-            //System.Net.HttpWebRequest request = (System.Net.HttpWebRequest) System.Net.HttpWebRequest.Create(targetUri);
-            //var response = request.GetResponse() as HttpWebResponse;
-            //Response.Redirect(url.ToString(), true);
-
-            //now pass oken to BL to pull data from trello.
+            //now Call BL code to get trello feed data
             var getTrelloCards = new GetTrelloCards();
             var results = getTrelloCards.GetNumberOfCardsInEachList();
 
-
-            var listOfCards = getTrelloCards.GetListOfCards("To Do");
+            var listOfCards = getTrelloCards.GetListOfCards("Doing");
 
         }
     }
