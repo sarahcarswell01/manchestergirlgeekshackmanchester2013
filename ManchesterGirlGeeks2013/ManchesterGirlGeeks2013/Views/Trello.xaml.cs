@@ -77,10 +77,14 @@ namespace ManchesterGirlGeeks2013.Views
             dispatcherTimer.Interval = new TimeSpan(0, 01, 0);
             dispatcherTimer.Start();
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
             
 >>>>>>> 28469e7437e06995ae653392428b5ddc703c0591
+=======
+            
+>>>>>>> c74074066475810c0bafb8d186290943932145a8
         }
         #endregion
 
@@ -93,13 +97,19 @@ namespace ManchesterGirlGeeks2013.Views
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             Cards = getTrelloCards.GetListOfCards("Doing");
 =======
+=======
+>>>>>>> c74074066475810c0bafb8d186290943932145a8
             Cards;
             ToDoItems;
             DoingItmes;
             DoneItems;
+<<<<<<< HEAD
 >>>>>>> 28469e7437e06995ae653392428b5ddc703c0591
+=======
+>>>>>>> c74074066475810c0bafb8d186290943932145a8
         }
 
         #endregion
