@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using manchestergirlgeekshackmanchester2013.TrelloFeed;
 
 namespace ManchesterGirlGeeks2013.Views
@@ -20,7 +21,7 @@ namespace ManchesterGirlGeeks2013.Views
     /// </summary>
     public partial class Trello : Page
     {
-        
+        DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
         GetTrelloCards getTrelloCards = new GetTrelloCards();
         
         #region Properties
@@ -58,8 +59,9 @@ namespace ManchesterGirlGeeks2013.Views
         {
             get
             {
-                return getTrelloCards.GetListOfCards("To Do");
+                return getTrelloCards.GetListOfCards("Doing");
             }
+            set { ;}
 
         }
         #endregion
@@ -71,11 +73,10 @@ namespace ManchesterGirlGeeks2013.Views
         public Trello()
         {
             InitializeComponent();
-
-            
-
-            var listOfCards = getTrelloCards.GetListOfCards("To Do");
-
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 01, 0);
+            dispatcherTimer.Start();
+  
         }
         #endregion
 
@@ -84,6 +85,12 @@ namespace ManchesterGirlGeeks2013.Views
         {
             this.NavigationService.GoBack();
         }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            Cards = getTrelloCards.GetListOfCards("Doing");
+        }
+
         #endregion
     }
 }

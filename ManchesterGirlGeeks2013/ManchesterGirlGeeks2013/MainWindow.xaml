@@ -6,9 +6,12 @@
       x:Name="_dash"
       telerik:StyleManager.Theme="Windows8"
       ShowsNavigationUI="False"
-      >
+      Style="{x:Null}"
+      WindowHeight="600"
+      WindowWidth="750" >
     <Grid x:Name="_grid">
         <telerik:RadTileList x:Name="_dashboard"
+                             Margin="35,0,0,0"
                              ScrollViewer.HorizontalScrollBarVisibility="Auto"
                              ScrollViewer.VerticalScrollBarVisibility="Auto"
                             Background="White">
@@ -48,7 +51,8 @@
                           Background="LightGray">
 
                 <telerik:RadTransitionControl Name="_tcslide" 
-                                              Content="{Binding ActiveReader, ElementName=_rmTile}" >
+                                                   Content="{Binding Images, ElementName=_dash}" >
+
                     <telerik:RadTransitionControl.Transition>
                         <telerik:PerspectiveRotationTransition/>
                     </telerik:RadTransitionControl.Transition>
@@ -57,8 +61,11 @@
                     <telerik:RadTransitionControl.ContentTemplate>
                         <DataTemplate>
 
+                            <Image Source="{Binding Path=.Images}" Height="100" Width="200"/>
+                            
                         </DataTemplate>
                     </telerik:RadTransitionControl.ContentTemplate>
+
                 </telerik:RadTransitionControl>
             </telerik:Tile>
 
