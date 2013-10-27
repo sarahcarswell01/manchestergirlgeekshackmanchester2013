@@ -14,6 +14,36 @@ namespace manchestergirlgeekshackmanchester2013.HackImages
     public class HackDayImageProvider
     {
         /// <summary>
+        /// ID of current image to display
+        /// </summary>
+        private int CurrentImageID { get; set; }
+        /// <summary>
+        /// Returns the next image url to display
+        /// </summary>
+        public string NextImageURL
+        {
+            get
+            {
+                // Make sure images are loaded
+                EnsureImages();
+                //
+                // Get the next image in the cache
+                CurrentImageID += 1;
+                //
+                // If the current image id is more than
+                // the number of images in the cache then reload the cache
+                if (CurrentImageID > Images.Count)
+                {
+                    this.Clear();
+                    EnsureImages();
+                    CurrentImageID = 0;
+                }
+                //
+                return this.Images[CurrentImageID];
+                //
+            }
+        }
+        /// <summary>
         /// Images to display
         /// </summary>
         public StringCollection Images
@@ -63,7 +93,7 @@ namespace manchestergirlgeekshackmanchester2013.HackImages
             string divindex;        // current div index in string
             int divnumber;          // current div index in number
             int nPosText;           // poistion of text in string
-            string[]  paragraphs;   // Paragraphs in divs
+            string[] paragraphs;   // Paragraphs in divs
             string[] images;        // Images in paragraphs
             string divtext;         // text in div
             string srcimage;        // source image contents
@@ -126,18 +156,20 @@ namespace manchestergirlgeekshackmanchester2013.HackImages
                                             {
                                                 nPosText = srcimage.IndexOf(">");
                                             }
-                                            srcimage= srcimage.Substring(0, nPosText-1).Trim();
+                                            srcimage = srcimage.Substring(0, nPosText - 1).Trim();
                                             if (!InternalImages.Contains(srcimage))
                                             {
                                                 InternalImages.Add(srcimage);
                                             }
                                         }
-                                }
+                                    }
                                 }
                             }
                         }
                     }
                 }
+                //
+                this.CurrentImageID = -1;
                 //
             }
         }
@@ -154,8 +186,8 @@ namespace manchestergirlgeekshackmanchester2013.HackImages
             StreamReader sr;        // string reader
             String html;            // html to return
             //
-            req=(HttpWebRequest)WebRequest.Create("http://deskand.co/hackmanchester/");
-            res=(HttpWebResponse)req.GetResponse();
+            req = (HttpWebRequest)WebRequest.Create("http://deskand.co/hackmanchester/");
+            res = (HttpWebResponse)req.GetResponse();
             sr = new StreamReader(res.GetResponseStream());
             html = sr.ReadToEnd();
             sr.Close();
