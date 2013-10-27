@@ -78,5 +78,12 @@ namespace ManchesterGirlGeeks2013.Views
 
         }
         #endregion
+
+        #region Event Handlers
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
+        #endregion
     }
 }

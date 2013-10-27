@@ -88,8 +88,7 @@
                           TileType="Single" 
                           IsSelected="False"
                           Background="LightGray"
-                          MouseLeftButtonDown="_trello_MouseLeftButtonDown"
-                      >
+                          MouseLeftButtonDown="_trello_MouseLeftButtonDown"    > 
                 <Image Source="Images/Trello_logo.png"/>
             </telerik:Tile>
 
@@ -102,7 +101,8 @@
             <telerik:Tile x:Name="_git"
                           TileType="Double" 
                           IsSelected="False"
-                          Background="LightGray" >
+                          Background="LightGray" 
+                          MouseLeftButtonDown="_git_MouseLeftButtonDown">
                 <Image Source="Images/github.png" Stretch="Fill"/>
                        
             </telerik:Tile>

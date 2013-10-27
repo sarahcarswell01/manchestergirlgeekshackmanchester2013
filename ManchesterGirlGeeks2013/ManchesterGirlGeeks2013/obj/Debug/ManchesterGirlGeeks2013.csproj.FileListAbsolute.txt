@@ -32,4 +32,7 @@ C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\Mancheste
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\TrelloNet.xml
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\RestSharp.xml
-C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\ManchesterGirlGeeks2013.csprojResolveAssemblyReference.cache
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\GitHubFeed.dll
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\bin\Debug\GitHubFeed.pdb
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\Views\GitHub.baml
+C:\Users\ntguru\Documents\GitHub\manchestergirlgeekshackmanchester2013\ManchesterGirlGeeks2013\ManchesterGirlGeeks2013\obj\Debug\Views\GitHub.g.cs

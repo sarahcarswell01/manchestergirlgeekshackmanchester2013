@@ -10,12 +10,47 @@
       x:Name="_trelloPage">
     <Page.Resources>
         <DataTemplate x:Key="_listItem">
-            <StackPanel Orientation="Horizontal"
-                        >
-                <TextBlock Text="{Binding Description}"/>
-                <TextBlock Text="{Binding Name}"/>
+            <StackPanel Orientation="Horizontal"      
+                        Width="400" >
+                <TextBlock Text="{Binding Name}" Width="200"/>
+                <ComboBox ItemsSource="{Binding Members}" 
+                          Width="200"
+                          SelectedIndex="0"
+                          Margin="20,0,0,0"/>
             </StackPanel>
         </DataTemplate>
+
+
+        <Style x:Key="itemStyle" TargetType="{x:Type telerik:RadListBoxItem}">
+            <Style.Resources>
+                <!--SelectedItem with focus-->
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Red" Opacity="0"/>
+                <!--SelectedItem without focus-->
+                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Red" Opacity="0"/>
+            </Style.Resources>
+
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Width" Value="400"/>          
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver"  Value="True">
+                    <Setter Property="BorderThickness" Value="0.2,0.2,0,0.2" />
+                    <Setter Property="Background" Value="{x:Null}"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                </Trigger>
+                <Trigger Property="IsSelected"  Value="True">
+                    <Setter Property="BorderThickness" Value="0.2,0.2,0,0.2" />
+                    <Setter Property="Background" Value="{x:Null}"/>
+                    <Setter Property="Foreground" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Page.Resources>
 
     <Grid Margin="0,50,0,0"  >
@@ -90,15 +125,28 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <TextBlock Text="In Progress"
                        FontSize="48"
                        Foreground="LightGray"/>
             <telerik:RadListBox Grid.Row="1"
+                                HorizontalAlignment="Left"
                                 ItemTemplate="{StaticResource _listItem}"
-                                Width="400"
+                                Width="600"
+                                Height="500"
                                 ItemsSource="{Binding Cards, ElementName=_trelloPage, UpdateSourceTrigger=PropertyChanged}"
-                                telerik:StyleManager.Theme="Windows8"/>
+                                telerik:StyleManager.Theme="Windows8"
+                                ItemContainerStyle="{StaticResource itemStyle}"
+                                BorderBrush="{x:Null}"/>
+            <Image Source="/ManchesterGirlGeeks2013;component/Images/Previous.png"
+                   Grid.Row="2"
+                   HorizontalAlignment="Right"
+                   Height="50"
+                   Width="50"
+                   Cursor="Hand"
+                   MouseDown="Image_MouseDown"/>
+                   
         </Grid>
     </Grid>
 </Page>

@@ -23,7 +23,8 @@ namespace ManchesterGirlGeeks2013
     {
         #region Fields
         private Timer _timerView = new Timer();
-        private Trello _trello = new Trello();
+        public Trello _trello = new Trello();
+        public GitHub _gitHub = new GitHub();
         #endregion
 
         #region Properties
@@ -80,7 +81,15 @@ namespace ManchesterGirlGeeks2013
         {
             _dash.NavigationService.Navigate(_trello);
         }
+
+        private void _git_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            _dash.NavigationService.Navigate(_gitHub);
+
+        }
         #endregion
+
+       
 
        
     }
