@@ -1,4 +1,8 @@
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImages\bin\Debug\HackImages.dll
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImages\bin\Debug\HackImages.pdb
+<<<<<<< HEAD
+=======
+C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImages\obj\Debug\HackImages.csprojResolveAssemblyReference.cache
+>>>>>>> 28469e7437e06995ae653392428b5ddc703c0591
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImages\obj\Debug\HackImages.dll
 C:\Users\admin\Documents\GitHub\manchestergirlgeekshackmanchester2013\HackImages\obj\Debug\HackImages.pdb
