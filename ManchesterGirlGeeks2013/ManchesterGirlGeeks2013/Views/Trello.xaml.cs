@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,6 +61,7 @@ namespace ManchesterGirlGeeks2013.Views
             {
                 return getTrelloCards.GetListOfCards("Doing");
             }
+            set { ;}
 
         }
         #endregion
@@ -75,7 +76,6 @@ namespace ManchesterGirlGeeks2013.Views
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 01, 0);
             dispatcherTimer.Start();
-            
         }
         #endregion
 
@@ -87,10 +87,7 @@ namespace ManchesterGirlGeeks2013.Views
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            Cards;
-            ToDoItems;
-            DoingItmes;
-            DoneItems;
+            Cards = getTrelloCards.GetListOfCards("Doing");
         }
 
         #endregion

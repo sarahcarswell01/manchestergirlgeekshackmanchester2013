@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trello_logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("background.ico")]
 
 
