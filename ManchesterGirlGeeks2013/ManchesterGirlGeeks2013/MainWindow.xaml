@@ -45,30 +45,13 @@
                     </StackPanel>
                 </Grid>
             </telerik:Tile>
-            <telerik:Tile x:Name="_eventPics"
-                          TileType="Quadruple" 
-                          IsSelected="False"
-                          Background="LightGray">
-
-                <telerik:RadTransitionControl Name="_tcslide" 
-                                                   Content="{Binding Images, ElementName=_dash}" >
-
-                    <telerik:RadTransitionControl.Transition>
-                        <telerik:PerspectiveRotationTransition/>
-                    </telerik:RadTransitionControl.Transition>
-
-
-                    <telerik:RadTransitionControl.ContentTemplate>
-                        <DataTemplate>
-
-                            <Image Source="{Binding Path=.Images}" Height="100" Width="200"/>
-                            
-                        </DataTemplate>
-                    </telerik:RadTransitionControl.ContentTemplate>
-
-                </telerik:RadTransitionControl>
+            <telerik:Tile x:Name="_dilbertView"
+                          TileType="Double" 
+                          IsSelected="False" 
+                          Background="LightGray"
+                          MouseLeftButtonDown="_dilbert_MouseLeftButtonDown">
+                <Image Source="Images/Dilbert.jpg" Stretch="Fill"/>
             </telerik:Tile>
-
             <telerik:Tile x:Name="_timer" 
                           TileType="Single" 
                           IsSelected="False" 
@@ -88,12 +71,12 @@
                           MouseLeftButtonDown="_trello_MouseLeftButtonDown"    > 
                 <Image Source="Images/Trello_logo.png"/>
             </telerik:Tile>
-            <telerik:Tile x:Name="_dilbertView"
+            <telerik:Tile x:Name="_hacView"
                           TileType="Double" 
                           IsSelected="False" 
                           Background="LightGray"
                           MouseLeftButtonDown="_dilbert_MouseLeftButtonDown">
-                <Image Source="Images/Dilbert.jpg" Stretch="Fill"/>
+                <Image Source="Images/Hac.jpg" Stretch="Fill"/>
             </telerik:Tile>
             <telerik:Tile x:Name="_git"
                           TileType="Double" 

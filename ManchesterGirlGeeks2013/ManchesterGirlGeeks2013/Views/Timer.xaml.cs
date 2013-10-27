@@ -22,6 +22,7 @@ namespace ManchesterGirlGeeks2013.Views
     {
         #region Fields
         private TimeSpan _countDown;
+        private DateTime _endTime = Convert.ToDateTime("2013-10-27 14:00:00");
         #endregion
 
         #region Properties
@@ -73,7 +74,8 @@ namespace ManchesterGirlGeeks2013.Views
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             ttbCountDown.IsStarted = true;
-            ttbCountDown.TimeSpan = TimeSpan.FromHours(24);
+            TimeSpan span = _endTime - DateTime.Now;
+            ttbCountDown.TimeSpan = span;
         }
         
 

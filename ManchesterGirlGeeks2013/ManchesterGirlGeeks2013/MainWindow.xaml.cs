@@ -102,6 +102,10 @@ namespace ManchesterGirlGeeks2013
         {
             this.NavigationService.Navigate(_dilbert);
         }
+        private void _hac_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(_dilbert);
+        }
         private void _twitter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.NavigationService.Navigate(_twitter);

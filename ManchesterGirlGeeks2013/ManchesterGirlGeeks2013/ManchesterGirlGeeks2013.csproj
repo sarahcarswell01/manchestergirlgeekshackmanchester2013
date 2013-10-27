@@ -82,6 +82,9 @@
     <Compile Include="Views\GitHub.xaml.cs">
       <DependentUpon>GitHub.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\HackImages.xaml.cs">
+      <DependentUpon>HackImages.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Timer.xaml.cs">
       <DependentUpon>Timer.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
     <Page Include="Views\GitHub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HackImages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Timer.xaml">
       <SubType>Designer</SubType>
@@ -171,6 +178,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="background.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Hac.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
