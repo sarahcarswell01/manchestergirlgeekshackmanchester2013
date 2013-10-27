@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using manchestergirlgeekshackmanchester2013.DilbertFeed;
 
 namespace ManchesterGirlGeeks2013.Views
@@ -20,6 +21,7 @@ namespace ManchesterGirlGeeks2013.Views
     /// </summary>
     public partial class Delbert : Page
     {
+        DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
         Dilbert _dilbert = new Dilbert();
 
         #region Properties
@@ -41,6 +43,10 @@ namespace ManchesterGirlGeeks2013.Views
             InitializeComponent();
 
             _browser.Source = DilbertURL;
+
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 20, 0);
+            dispatcherTimer.Start();
         }
         #endregion
 
@@ -54,6 +60,11 @@ namespace ManchesterGirlGeeks2013.Views
         {
             this.NavigationService.GoBack();
         }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+        }
+
         #endregion
     }
 }

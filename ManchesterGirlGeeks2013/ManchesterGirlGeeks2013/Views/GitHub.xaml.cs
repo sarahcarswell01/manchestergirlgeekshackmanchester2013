@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using manchestergirlgeekshackmanchester2013.GitHubFeed;
 
 namespace ManchesterGirlGeeks2013.Views
@@ -20,7 +21,7 @@ namespace ManchesterGirlGeeks2013.Views
     /// </summary>
     public partial class GitHub : Page
     {
-        
+        DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
         //GitConnection connection = new GitConnection();
         SummaryDetail detail = new SummaryDetail();
         #region Properties
@@ -43,12 +44,21 @@ namespace ManchesterGirlGeeks2013.Views
         public GitHub()
         {
             InitializeComponent();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 20, 0);
+            dispatcherTimer.Start();
         }
         #endregion
 
+        #region event handlers
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.NavigationService.GoBack();
         }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {            
+        }
+        #endregion
     }
 }

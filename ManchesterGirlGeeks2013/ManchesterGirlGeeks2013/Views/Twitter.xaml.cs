@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using manchestergirlgeekshackmanchester2013.TwitterFeed;
 
 namespace ManchesterGirlGeeks2013.Views
@@ -20,7 +21,9 @@ namespace ManchesterGirlGeeks2013.Views
     /// </summary>
     public partial class Twitter : Page
     {
+        DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
         TwitterConnection twitter = new TwitterConnection();
+
         #region Properties
         public List<TwitterStatusResponse> TwitterFeed
         {
@@ -37,6 +40,9 @@ namespace ManchesterGirlGeeks2013.Views
         public Twitter()
         {
             InitializeComponent();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 30);
+            dispatcherTimer.Start();
         }
         #endregion
         #region Event Handlers
@@ -44,6 +50,11 @@ namespace ManchesterGirlGeeks2013.Views
         {
             this.NavigationService.GoBack();
         }
+
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+        }
+
         #endregion
     }
 }
